@@ -1,9 +1,9 @@
 {
-  "name": "klasik-components",
-  "version": "1.0.0",
-  "description": "Klasik components for Klasik web sites",
-  "main": "./build/index.js",
-  "module": "./build/index.es.js",
+  "name": "@klasik01/klasik-components",
+  "version": "0.0.2",
+  "description": "Klasik react components for Klasik web sites",
+  "main": "./dist/index.js",
+  "module": "./dist/index.es.js",
   "scripts": {
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
@@ -14,7 +14,13 @@
   "keywords": [],
   "author": "klasik01",
   "license": "ISC",
-  "dependencies": {
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "files": [
+    "dist"
+  ],
+  "peerDependencies": {
     "@testing-library/svelte": "^3.0.3",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
@@ -65,5 +71,9 @@
     "ts-jest": "^26.4.4",
     "ts-loader": "^8.0.12",
     "typescript": "^4.1.3"
+  },
+  "types": "dist/index.d.ts",
+  "dependencies": {
+    "np": "^7.1.0"
   }
 }
