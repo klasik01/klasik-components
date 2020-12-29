@@ -1,5 +1,5 @@
 import React from "react";
-import { PrimaryButton, PrimaryButtonInterface } from "./buttons/Button";
+import { PrimaryButton, PrimaryButtonInterface } from "../buttons/Button";
 import { Story } from "@storybook/react";
 
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -22,22 +22,12 @@ export default {
 
 const Template: Story<PrimaryButtonInterface> = args => <PrimaryButton {...args} />;
 
-export const Default = Template.bind({});
-Default.args = {
+export const PrimButton = Template.bind({});
+PrimButton.args = {
   id: "1",
   label: "Primary Button",
   color1: BUTTON_PRIMARY_1,
   color2: BUTTON_PRIMARY_2,
   inverse: false,
-  className: "",
-};
-
-export const Inverse = Template.bind({});
-Inverse.args = {
-  id: "2",
-  label: "Inverse Primary Button",
-  color1: BUTTON_PRIMARY_1,
-  color2: BUTTON_PRIMARY_2,
-  inverse: true,
   className: "",
 };
